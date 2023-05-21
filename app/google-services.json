@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "738730002473",
+    "project_id": "doancuoiky-25eca",
+    "storage_bucket": "doancuoiky-25eca.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738730002473:android:4bc7f129da8f9649e8b438",
+        "android_client_info": {
+          "package_name": "com.nhanlovecode.doancuoiky"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738730002473-qablju2hviah0ejc3hf4e5pvku9l0flb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBjC8DDu5L6pQuiSsljLpT7tWpUSTaS_K0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738730002473-qablju2hviah0ejc3hf4e5pvku9l0flb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

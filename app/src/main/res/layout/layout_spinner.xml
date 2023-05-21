@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="12dp"
+    android:layout_margin="10dp"
+    android:background="@drawable/layout_border">
+    <TextView
+        android:id="@+id/tvCategoryNameSelected"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17dp"
+        android:text="Lẩu Hải Sản" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="23dp"
+        android:layout_marginLeft="12dp"
+        android:src="@drawable/arrow_drop_down"
+        android:layout_gravity=""/>
+</LinearLayout>

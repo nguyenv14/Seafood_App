@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.Cart.CartActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/lightseagreen"
+            app:title="Toolbar Title" />
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:layout_below="@id/toolBar"
+            android:layout_above="@id/loBottom"
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <LinearLayout
+            android:id="@+id/loBottom"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/white">
+            <LinearLayout
+                android:padding="6dp"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_weight="0.25"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+                <CheckBox
+                    android:textStyle="bold"
+                    android:id="@+id/cbCheckAll"
+                    android:text="Tất cả"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </CheckBox>
+            </LinearLayout>
+            <LinearLayout
+                android:padding="6dp"
+                android:orientation="horizontal"
+                android:layout_weight="0.4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tổng Tiền: "
+                    android:textStyle="bold"
+                    android:textColor="@color/red"
+                    android:textSize="15sp">
+                </TextView>
+                <TextView
+                    android:id="@+id/txtTotalPrice"
+                    android:paddingLeft="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0k"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="15sp">
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:padding="6dp"
+                android:orientation="vertical"
+                android:layout_weight="0.28"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+                <TextView
+                    android:id="@+id/btnBuyNow"
+                    android:textAlignment="center"
+                    android:padding="6dp"
+                    android:textStyle="bold"
+                    android:text="Mua Ngay"
+                    android:background="@drawable/bg_btn_buynow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </TextView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

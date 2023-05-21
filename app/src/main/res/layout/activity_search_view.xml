@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Views.Search.SearchViewActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/btnCancel"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="wrap_content"
+            android:src="@drawable/undo24x24"
+            android:paddingLeft="4dp"
+            android:layout_marginLeft="5dp"
+            />
+        <androidx.appcompat.widget.SearchView
+            app:queryBackground="@android:color/transparent"
+            android:id="@+id/searchView"
+            android:layout_width="0dp"
+            android:layout_weight="0.7"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginVertical="4dp"
+            android:elevation="10dp"
+            android:background="@drawable/layout_search"
+            app:closeIcon="@drawable/clear"
+            app:iconifiedByDefault="false"
+            app:queryHint="Bạn tìm gì hôm nay?"
+            app:searchIcon="@mipmap/search"
+            android:layout_gravity="center"
+            />
+
+        <ImageView
+            android:id="@+id/btnVoice"
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="25dp"
+            android:src="@mipmap/music"
+            android:layout_gravity="center"
+            android:layout_marginLeft="15dp"
+            />
+
+        <ImageView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/btnCart"
+            android:src="@drawable/cargo"
+            android:layout_gravity="center"
+            android:layout_width="0dp"
+            android:layout_weight="0.1"
+            android:layout_height="25dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:scrollbars="horizontal">
+        <LinearLayout
+            android:background="@drawable/layout_border"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp">
+            <Spinner
+                android:id="@+id/spinnerCategory"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:tag="Danh mục"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:background="@drawable/layout_border"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <Spinner
+                android:id="@+id/spinnerFilter"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/priceMin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Số thứ nhất"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center"/>
+        <com.google.android.material.slider.RangeSlider
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:elevation="10dp"
+            android:id="@+id/rangePrice"
+            android:layout_marginLeft="-10dp"
+            />
+        <TextView
+            android:id="@+id/priceMax"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewAllProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:listitem="@layout/item_product"
+            android:layout_marginHorizontal="10dp"
+            />
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/imageNull"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/empty2"
+            app:lottie_repeatMode="reverse" />
+    </LinearLayout>
+
+</LinearLayout>

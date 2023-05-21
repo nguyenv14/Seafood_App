@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp">
+
+    <CheckBox
+        android:id="@+id/cbCart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <ImageView
+        android:id="@+id/imgCart"
+        android:background="@drawable/bg_image"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_baseline_home_24"
+        android:layout_width="120dp"
+        android:layout_height="80dp">
+    </ImageView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txtCartName"
+                android:textSize="15dp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tên Sản Phẩm">
+            </TextView>
+            <TextView
+                android:id="@+id/txtCartPrice"
+                android:textSize="12dp"
+                android:textColor="@color/red"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100.000.000đ">
+            </TextView>
+            <LinearLayout
+                android:paddingTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgCartMinus"
+                    android:src="@drawable/minus"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/txtCartQuantity"
+                    android:gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textSize="18sp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingBottom="8dp"
+                    android:layout_gravity="center"/>
+
+                <ImageView
+                    android:id="@+id/imgCartPlus"
+                    android:src="@drawable/plus"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+                </ImageView>
+
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/imgCartDelete"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:src="@drawable/cancel"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="top|right">
+        </ImageView>
+    </FrameLayout>
+
+</LinearLayout>

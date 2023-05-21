@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="8dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    app:cardCornerRadius="4dp"
+    android:layout_width="160dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/itemProduct">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <ImageView
+                android:id="@+id/imgFavorite"
+                android:src="@drawable/ic_launcher_background"
+                android:layout_width="match_parent"
+                android:layout_height="160dp">
+
+            </ImageView>
+            <TextView
+                android:paddingTop="10dp"
+                android:id="@+id/tvFavoriteName"
+                android:text="Tên Sản Phẩm"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white">
+            </TextView>
+
+            <TextView
+                android:paddingTop="5dp"
+                android:id="@+id/tvFavoritePrice"
+                android:text="Giá : 100k"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingBottom="5dp">
+            </TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:id="@+id/btnToSimilar"
+                    android:layout_width="100dp"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:padding="3dp"
+                    android:background="@drawable/bg_btn_orange"
+
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="16dp"
+                        android:textColor="@color/white"
+                        android:text="Tương tự"/>
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/btnUnFavorite"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/img"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <!--        <ImageView-->
+        <!--            android:src="@drawable/iconnew"-->
+        <!--            android:layout_gravity="top|right"-->
+        <!--            android:layout_width="30dp"-->
+        <!--            android:layout_height="30dp">-->
+        <!--        </ImageView>-->
+    </FrameLayout>
+
+</androidx.cardview.widget.CardView>

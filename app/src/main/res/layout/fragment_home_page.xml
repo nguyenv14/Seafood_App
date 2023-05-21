@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".Views.Home.HomePageFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/loSlider"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPager2Slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    >
+
+                </androidx.viewpager2.widget.ViewPager2>
+
+                <me.relex.circleindicator.CircleIndicator3
+                    android:layout_gravity="center"
+                    android:id="@+id/circleIndicator3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    app:ci_drawable="@drawable/bg_indicator_3">
+
+                </me.relex.circleindicator.CircleIndicator3>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="invisible"
+                android:id="@+id/loCategory"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txtCategory"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Danh Mục"
+                    android:layout_margin="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold">
+                </TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rcCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="invisible"
+                android:id="@+id/loNewProduct"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/tvNewProduct"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sản Phẩm Mới"
+                    android:layout_margin="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold">
+                </TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerviewNewProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="10dp"
+                    android:paddingBottom="20dp">
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="invisible"
+                android:id="@+id/loOrderProduct"
+                android:background="@color/design_default_color_surface"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp">
+                <TextView
+                    android:id="@+id/txtOrderProduct"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sản Phẩm Thịnh Hành"
+                    android:layout_margin="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold">
+                </TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:clipToPadding="false"
+                    android:background="@color/design_default_color_surface"
+                    android:id="@+id/recyclerviewTrendingProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginLeft="5dp">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loTrendingProduct"
+                android:visibility="invisible"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp">
+                <TextView
+                    android:id="@+id/txtTrendingProduct"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sản Phẩm Bán Chạy"
+                    android:layout_margin="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold">
+                </TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerviewOrderProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginLeft="5dp">
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/loProduct"
+                android:visibility="invisible"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="20dp">
+                <TextView
+                    android:id="@+id/txtProduct"
+                    android:paddingTop="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sản Phẩm"
+                    android:layout_margin="5dp"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold">
+                </TextView>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerviewProduct"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="5dp">
+                </androidx.recyclerview.widget.RecyclerView>
+                <TextView
+                    android:id="@+id/txtSeeMore"
+                    android:layout_gravity="center"
+                    android:text="Xem Thêm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                </TextView>
+                <ProgressBar
+                    android:id="@+id/progressBarSeeMore"
+                    android:layout_gravity="center"
+                    android:visibility="gone"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp">
+                </ProgressBar>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ProgressBar
+            android:id="@+id/progressBarHome"
+            android:layout_marginTop="50mm"
+            android:layout_centerHorizontal="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp">
+        </ProgressBar>
+
+    </RelativeLayout>
+
+
+</ScrollView>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Views.LoginAndSignup.SignUp.Authentication.AuthenticationActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/face_scanning"
+        app:lottie_repeatMode="reverse" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="20dp"
+        android:paddingHorizontal="10dp"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Veritify with Email: "
+            android:textColor="@color/chocolate"
+            android:textSize="20dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="nguyennvv.21it@vku.udn.vn"
+            android:id="@+id/emailName"
+            android:textSize="18dp"/>
+    </LinearLayout>
+
+    <com.chaos.view.PinView
+        android:id="@+id/pinView"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:elevation="10dp"
+        android:layout_gravity="center"
+        app:itemWidth="60dp"
+        app:itemHeight="60dp"
+        app:itemRadius="10dp"
+        app:itemSpacing="20dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:padding="10dp"
+        android:gravity="right"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_marginRight="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15dp"
+            android:id="@+id/resendCode"
+            android:text="Gửi lại mã..."/>
+    </LinearLayout>
+
+
+</LinearLayout>
